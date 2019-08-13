@@ -1,0 +1,25 @@
+1.Install simplicity studio
+
+2.Install packages specific to the product 
+
+3. First run the SoC-empty Demo and then run a new porject called Soc-empty ..now we can see debug messages printed on the COM port connected 
+
+4.For the debug messages to be printed just iuse the debug option in the kit
+
+5. Final thing is we can see the stack version, local BT device address and boot event respectively for the kit
+
+
+6. Two configurations need to be done : 1)Server and 2)Client
+
+7. Server side: In the Soc -empty project there will be .isc file where we can configure the GATT under that
+
+      1)If we want to change the name, go to generic access -> device name -> 'update in the value field'
+      2) Change it's length manually and click generate
+
+8. next Select the service to be advertised: select Silicon Labs OTA service.
+--Tick the Advertise service checkbox
+-- Click Generate
+
+9. Now go to app.c file and change the line-> gecko_cmd_le_gap_start_advertising(0, le_gap_general_discoverable, le_gap_undirected_connectable);
+
+10.Now we can see the device get's connected and also its discoverable with custom name and device address
