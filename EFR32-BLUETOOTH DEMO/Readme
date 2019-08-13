@@ -1,0 +1,5 @@
+This includes basic server client demo:
+Client does initiate connection and will scan the server
+Server will advertise itself with services pre-installed
+
+NOTE: Try this with two EFR32 boards on you can observe the status of their connections on two serial terminals
